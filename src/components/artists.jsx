@@ -1,7 +1,11 @@
+
+
 import React from 'react'
 
-export default function Artists() {
+export default function artists() {
   return (
-    <div>artists</div>
+    <div>
+      
+    </div>
   )
 }

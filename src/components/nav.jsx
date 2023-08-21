@@ -27,7 +27,7 @@ const Nav = () => {
     <header>
       <nav className={`nav`}>
         <Link href={"/"}>
-          <Image src={logo} alt="logo" width="400px" height="400px"/>
+          <Image src={logo} alt="logo" width="100" height="60"/>
         </Link>
         <div
           onClick={() => setIsNavActive(!isNavActive)}
