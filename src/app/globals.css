@@ -288,3 +288,81 @@ nav {
 }
 
 /* Artists Styles End */
+
+/* Events Styles */
+.events__container {
+  background-color: white;
+  padding: 80px 0;
+}
+
+.events__content {
+  position: relative;
+  margin: auto;
+  width: 90%;
+}
+
+.events__background {
+  background-image: url('../../public//our-events-bg.svg');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.events__background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity (0.5 for 50% opacity) */
+  z-index: 1; /* Place it above the background image */
+}
+
+.events__center {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 20px;
+
+}
+
+.events__heading {
+  font-size: 64px;
+  margin-bottom: 20px;
+  z-index: 10;
+}
+
+.events__subheading {
+  font-size: 20px;
+  margin-bottom: 60px;
+}
+
+.events__button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  width: 234px;
+  border-radius: 62px;
+  height: 80px;
+  cursor: pointer;
+  font-size: 24px;
+
+}
+
+/* Media queries for responsive design */
+@media screen and (max-width: 768px) {
+  .events__background {
+    height: 500px; 
+  }
+  
+  .events__subheading {
+    font-size: 20px;
+  }
+}
+
+/* Events Styles End */
