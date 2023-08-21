@@ -366,3 +366,71 @@ nav {
 }
 
 /* Events Styles End */
+
+
+/* Explore Styles */
+/* Other global styles */
+
+/* Styles for the Explore component */
+.explore__container {
+  padding: 60px 0;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.explore__heading {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.explore__grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Default: 1 card per row on large screens */
+}
+
+
+.explore__card {
+  overflow: hidden;
+  height: 100%;
+  border: none;
+
+}
+
+.explore__image {
+  width: 100%;
+  height: auto;
+}
+
+.explore__text {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.explore__artist {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--primary-color);
+}
+
+
+/* Media queries for responsive design */
+@media screen and (min-width: 768px) {
+  .explore__grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on tablets */
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .explore__grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row on larger screens */
+  }
+}
+
+
+
+/* Explore Styles End */
+
+
