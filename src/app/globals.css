@@ -8,33 +8,139 @@
   --container-height: max-content;
   --container-width: 100vw;
   --bg-color: #141414;
+  --primary-color: #D8A43E;
+  --secondary-color: #AF8D44;
+  --light-gray: #D8D8D8;
+  --white: #FFFFFF;
+  --black: #000000;
 }
 
 body, html {
   background-color: var(--bg-color);
-  color: white;
+  color: var(--white);
 }
 
 .container {
   height: var(--container-height);
   width: var(--container-width);
-  background-color: red;
+  background-color: var(--primary-color);
+}
+
+/* Nav Styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  position: sticky;
+  z-index: 30;
+  top: 0;
+}
+
+nav {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  padding: 16px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px; 
+  background-color: var(--white); 
+}
+
+.nav__menu-bar {
+  display: flex;
+  flex-direction: column;
+  row-gap: 6px;
+  cursor: pointer;
+}
+
+.nav__menu-bar div {
+  width: 24px;
+  height: 1px;
+  background: var(--white);
+  z-index: 99;
+  border-radius: 2px;
 }
 
 
+.nav__menu-list {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 60px;
+  width: 288px;
+  row-gap: 24px;
+  right: -288px;
+  padding: 24px 16px;
+  transition: all 0.2s;
+  min-height: calc(100vh - 60px);
+  background-color: var(--white);
+  color: var(--black);
+}
 
-/* Hero Styles */
+.nav__menu-list.active {
+  right: 0;
+}
+
+.nav__link {
+  font-size: 15px;
+  position: relative;
+  transition: all 0.2s;
+  color: var(--blk);
+}
+
+.nav__link:hover {
+  font-weight: bold;
+}
+
+.center {
+  min-height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .nav__menu-bar {
+    display: none;
+  }
+
+  .nav__menu-list {
+    position: unset;
+    flex-direction: row;
+    margin-right: 40px;
+    min-height: fit-content;
+    width: fit-content;
+    column-gap: 48px;
+    align-items: center;
+    background-color: transparent;
+    color: var(--white);
+  }
+
+  .nav__link::before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 6px;
+    bottom: -16px;
+    left: 0;
+    transition: all 0.2s;
+  }
+
+  .nav__link:hover:before {
+    width: 100%;
+  }
+}
 
 
-/* Hero Style Ends */
-
-
-
-/* Explore Styles */
-
-/* Explore Style Ends */
-
-
-/* Media Queries */
-
-
+/* Nav Styles End */
