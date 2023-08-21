@@ -1,4 +1,3 @@
-import styles from "./page.module.css";
 import Hero from "@/components/hero";
 import Artists from "@/components/artists";
 import OurEvents from "@/components/our-events";

@@ -2,6 +2,10 @@ import React from 'react'
 
 export default function Hero() {
   return (
-    <div>hero</div>
+    <>
+      <section className="container">
+        <h2>This is the Hero page</h2>
+      </section>
+    </>
   )
 }
