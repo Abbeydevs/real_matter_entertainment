@@ -5,7 +5,7 @@
 }
 
 :root {
-  --container-height: 75vh;
+  --container-height: max-content;
   --container-width: 100vw;
   --bg-color: #141414;
   --primary-color: #D8A43E;
@@ -23,6 +23,8 @@ body, html {
 .container {
   height: var(--container-height);
   width: var(--container-width);
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 /* Nav Styles */
@@ -152,7 +154,7 @@ nav {
   background-repeat: no-repeat; 
   background-position: 10%;
   width: 100%;
-  height: 100%;
+  height: 75vh;
 }
 
 .hero__wrapper {
@@ -219,3 +221,70 @@ nav {
 
 /* Hero Styles End */
 
+/* Artists Styles */
+.artist__container {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  border-radius: 5px;
+  background: var(--bg-color);
+}
+
+.artist__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.artist__heading {
+  font-size: 36px;
+}
+
+.artist__bookArtistButton {
+  background-color: var(--white);
+  color: var(--black);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 16px;
+
+}
+
+.artist__imageGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(31%, 1fr));
+  gap: 2%;
+  margin-top: 60px;
+  height: fit-content;
+}
+
+.artist__imageItem {
+  border-radius: 5px;
+  border: none;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.artist__imageItem img {
+  width: 100%;
+  height: 100%;
+
+}
+
+/* Media queries */
+@media (max-width: 1024px) {
+  .artist__imageGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .artist__imageGrid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* Artists Styles End */
