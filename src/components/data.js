@@ -4,6 +4,8 @@ import explore3 from "../../public/explore3.svg"
 import artist1 from "../../public/artist1.svg"
 import artist2 from "../../public/artist2.svg"
 import artist3 from "../../public/artist3.svg"
+import shop1 from "../../public/shop1.svg"
+import shop2 from "../../public/shop2.svg"
 
 export const exploreData = [
     {
@@ -49,5 +51,17 @@ export const artistData = [
     },
   ];
   
-  
+  export const shopItems = [
+    {
+      id: 1,
+      name: 'Product 1',
+      image: shop1,
+    },
+    {
+      id: 2,
+      name: 'Product 2',
+      image: shop2,
+    },
+  ];
+
   

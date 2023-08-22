@@ -6,7 +6,7 @@
 
 :root {
   --container-height: max-content;
-  --container-width: 100vw;
+  --container-width: 100%;
   --bg-color: #141414;
   --primary-color: #D8A43E;
   --secondary-color: #AF8D44;
@@ -23,8 +23,6 @@ body, html {
 .container {
   height: var(--container-height);
   width: var(--container-width);
-  margin-top: 40px;
-  margin-bottom: 40px;
 }
 
 /* Nav Styles */
@@ -40,12 +38,13 @@ header {
 }
 
 nav {
-  width: 90%;
+  width: 85%;
   margin: 0 auto;
   display: flex;
   padding: 16px;
   justify-content: space-between;
   align-items: center;
+  height: 80px;
 }
 
 .nav::after {
@@ -149,16 +148,16 @@ nav {
 
 /* Hero Styles */
 .hero__container {
-  background-image: url('../../public/hero-bg.svg');
+  background-image: url('../../public/hero.svg');
   background-size: cover;
   background-repeat: no-repeat; 
-  background-position: 10%;
-  width: 100%;
-  height: 75vh;
+  background-position: center;
+  min-height: 100vh;
+  position: relative;
 }
 
 .hero__wrapper {
-  width: 90%;
+  width: 85%;
   height: 100%;
   display: flex;
   margin: 0 auto;
@@ -167,32 +166,40 @@ nav {
 .hero__content__wrapper {
   display: flex;
   flex-direction: column;
-  width: 45%;
-  height: 100%;
+  min-height: 100vh;
+  width: 50%;
   justify-content: center;
+  
   
 }
 .hero__img__wrapper {
   position: absolute;
+  top: 0;
   right: 0;
+}
+
+.hero__img__wrapper Image {
   width: 100%;
-  height: 100%;
-  margin-left: 0;
-  display: flex;
-  justify-content: flex-end;
 }
 
 .hero__subHeading {
-  font-size: 24px;
+  font-size: 18px;
   color: var(--primary-color);
-}
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  }
 
 .hero__Heading {
-  font-size: 96px;
+  font-size: 64px;
   color: var(--light-gray);
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 .hero__btn__wrapper {
+  width: 100;
   display: flex;
   gap: 20px;
   margin-top: 40px;
@@ -203,9 +210,12 @@ nav {
   align-items: center;
   justify-content: center;
   font-size: 16px;
-  width: 216px;
-  height: 80px;
+  width: 200px;
+  height: 60px;
   border-radius: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 .hero__btn__bg {
@@ -219,14 +229,43 @@ nav {
   border: 2px solid var(--white);
 }
 
+.hero-person {
+  height: 100vh;
+}
+
+@media (max-width: 884px) {
+
+  .hero__container {
+    min-height: auto;
+  }
+  .hero__content__wrapper {
+    min-height: auto;
+    padding: 150px 0;
+    
+    
+  }
+
+  .hero__content__wrapper {
+    width: 100%;
+    
+  }
+  .hero__img__wrapper {
+    display: none;
+  }
+
+  .hero__img__wrapper Image {
+    display: none;
+  }
+}
+
 /* Hero Styles End */
 
 /* Artists Styles */
 .artist__container {
-  width: 90%;
+  width: 85%;
   margin: 0 auto;
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 100px;
+  padding-bottom: 184px;
   border-radius: 5px;
   background: var(--bg-color);
 }
@@ -238,30 +277,38 @@ nav {
 }
 
 .artist__heading {
-  font-size: 36px;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .artist__bookArtistButton {
   background-color: var(--white);
   color: var(--black);
   border: none;
-  padding: 10px 20px;
-  border-radius: 40px;
-  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 16px;
-
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  width: 186px;
+  height: 60px;
+  border-radius: 40px;
 }
 
 .artist__imageGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(31%, 1fr));
   gap: 2%;
-  margin-top: 60px;
+  margin-top: 64px;
   height: fit-content;
 }
 
 .artist__imageItem {
-  border-radius: 5px;
+  border-radius: 28px;
   border: none;
   overflow: hidden;
   width: 100%;
@@ -271,6 +318,7 @@ nav {
 .artist__imageItem img {
   width: 100%;
   height: 100%;
+  border: none;
 
 }
 
@@ -292,13 +340,13 @@ nav {
 /* Events Styles */
 .events__container {
   background-color: white;
-  padding: 80px 0;
+  padding: 100px 0;
 }
 
 .events__content {
   position: relative;
   margin: auto;
-  width: 90%;
+  width: 85%;
 }
 
 .events__background {
@@ -325,6 +373,10 @@ nav {
 
 .events__center {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   z-index: 2;
   text-align: center;
   padding: 20px;
@@ -339,19 +391,23 @@ nav {
 
 .events__subheading {
   font-size: 20px;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 .events__button {
   background-color: var(--primary-color);
-  color: white;
+  color: var(--white);
   border: none;
-  width: 234px;
-  border-radius: 62px;
-  height: 80px;
-  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 24px;
-
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  width: 186px;
+  height: 62px;
+  border-radius: 62px;
 }
 
 /* Media queries for responsive design */
@@ -374,7 +430,8 @@ nav {
 /* Styles for the Explore component */
 .explore__container {
   padding: 60px 0;
-  width: 90%;
+  width: 85%;
+  padding: 100px 0;
   margin: 0 auto;
 }
 
@@ -433,4 +490,97 @@ nav {
 
 /* Explore Styles End */
 
+/* Shop Styles */
+.shop__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.shop__column.shop__column-1 {
+  background: url('../../public/shop1.svg'), lightgray;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 1px solid #000;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  height: 400px;
+  width: 100%;
+  position: relative;
+}
+
+.shop__imageOverlay.shop__column-1 {
+  background: rgba(255, 255, 255, 0.5);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+}
+
+
+.shop__column.shop__column-2 {
+  background: url('../../public//shop2.svg');
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 400px;
+  width: 100%;
+  position: relative;
+}
+
+.shop__imageOverlay.shop__column-2 {
+  background: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.shop__text {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.shop__subHeading {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.shop__heading {
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+
+
+.shop__button {
+  background: transparent;
+  width: fit-content;
+  border: 2px solid white;
+  padding: 20px 60px;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 30px;
+  border-radius: 60px;
+  z-index: 2;
+}
+
+/* Shop Styles  End */
+
+
+/* Newsletter Styles */
 

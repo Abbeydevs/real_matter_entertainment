@@ -17,7 +17,7 @@ export default function Hero() {
               </div>
             </div>
             <div className="hero__img__wrapper">
-              <Image src={heroimg} alt='hero-person' width="100%" height="600"/>
+              <Image src={heroimg} alt='hero-person' className='hero-person'/>
             </div>
           </div>
         </div>
