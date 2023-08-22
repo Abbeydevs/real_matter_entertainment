@@ -6,7 +6,7 @@ import Image from 'next/image';
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   return (
-    <section className='container'>
+    <section className='container fade-in'>
       <footer className="footer__container">
       <div className="footer__logo">
           <Image src={logo} alt="logo" className='footer__image' />

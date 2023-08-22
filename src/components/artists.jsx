@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function Artists() {
   return (
-    <section className="container">
+    <section className="container fade-in">
       <div className="artist__container">
         <div className="artist__header">
           <h2 className="artist__heading">Artists</h2>

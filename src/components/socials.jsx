@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export default function Socials() {
   return (
-    <section className='container'>
+    <section className='container fade-in'>
     <div className="socials-container">
       <h1 className="socials-heading">Follow Us</h1>
       <div className="social-icons-container">

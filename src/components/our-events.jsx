@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function OurEvents() {
   return (
-    <section className="container">
+    <section className="container fade-in">
       <div className="events__container">
         <div className="events__content">
           <div className="events__background">

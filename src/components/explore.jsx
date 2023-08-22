@@ -4,6 +4,7 @@ import { exploreData } from './data'
 
 export default function Explore() {
   return (
+   <section className='container fade-in'>
     <div className="explore__container">
       <h2 className="explore__heading">Explore our songs</h2>
       <div className="explore__grid">
@@ -15,5 +16,6 @@ export default function Explore() {
         ))}
       </div>
     </div>
+   </section> 
   )
 }

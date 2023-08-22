@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function shop() {
   return (
-    <section className='container'>
+    <section className='container fade-in'>
       <div className="shop__container">
         <div className="shop__column shop__column-1">
           <div className="shop__imageOverlay shop__column-1">
