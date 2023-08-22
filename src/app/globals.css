@@ -714,3 +714,35 @@ nav {
 
 
 /* Socials Styles End */
+
+/* Footer Styles */
+
+.footer__container {
+  background: #232323;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding-top: 150px;
+  padding-bottom: 50px;
+}
+
+.footer__logo Image {
+  width: 100px; /* Adjust the width as needed */
+  height: auto;
+}
+
+.copyright__text {
+  color: #636363;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  }
+
+/* Footer Styles End */
