@@ -6,6 +6,10 @@ import artist2 from "../../public/artist2.svg"
 import artist3 from "../../public/artist3.svg"
 import shop1 from "../../public/shop1.svg"
 import shop2 from "../../public/shop2.svg"
+import twitterbird from "../../public/twitterbird.svg"
+import facebook from "../../public/facebook.svg"
+import instagram from "../../public/instagram.svg"
+import soundcloud from "../../public/soundcloud.svg"
 
 export const exploreData = [
     {
@@ -63,5 +67,10 @@ export const artistData = [
       image: shop2,
     },
   ];
-
+export  const socialData = [
+    { icon: facebook, link: 'https://www.facebook.com/' },
+    { icon: twitterbird, link: 'https://twitter.com/' },
+    { icon: instagram, link: 'https://www.instagram.com/' },
+    { icon: soundcloud, link: 'https://www.soundcloud.com/' },
+  ];
   
