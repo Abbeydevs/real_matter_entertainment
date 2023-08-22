@@ -204,13 +204,13 @@ nav {
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  margin-top: 80px;
 }
 
 .hero__btn__wrapper {
   width: 100;
   display: flex;
   gap: 20px;
+  margin-top: 20px;
 }
 
 .hero__btn {
@@ -959,19 +959,13 @@ button {
 }
 
 .slide-in-text {
-  position: relative;
+  position: absolute;
+  top: 50%;
   transform: translateY(-50%);
+  font-size: 24px;
   animation: slideIn 1s linear; /* Use linear easing */
-  
 }
 
-h1.slide-in-text.hero__Heading {
-  animation-delay: 2s;
-}
-
-div.slide-in-text.hero__btn__wrapper {
-  animation-delay: 3s;
-}
 
 
 @keyframes slideIn {

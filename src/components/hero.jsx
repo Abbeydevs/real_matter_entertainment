@@ -8,16 +8,16 @@ export default function Hero() {
       <section className="container">
         <div className="hero__container">
           <div className="hero__wrapper">
-            <div className="hero__content__wrapper ">
-              <h5 className='hero__subHeading slide-in-text'>Real Matter Ent.</h5>
-              <h1 className='hero__Heading slide-in-text'>Where Music Matters.</h1>
-              <div className="hero__btn__wrapper slide-in-text">
+            <div className="hero__content__wrapper slide-in-text">
+              <h5 className='hero__subHeading'>Real Matter Ent.</h5>
+              <h1 className='hero__Heading'>Where Music Matters.</h1>
+              <div className="hero__btn__wrapper">
               <Link href="/artists" className="hero__btn hero__btn__bg">View all artists</Link>
               <Link href="/releases" className="hero__btn hero__btn__bordered">Explore Music</Link>
               </div>
             </div>
             <div className="hero__img__wrapper">
-              <Image src={heroimg} alt='hero-person' className='hero-person'/>
+              <Image src={heroimg} alt='hero-person' className='hero-person fade-in'/>
             </div>
           </div>
         </div>
