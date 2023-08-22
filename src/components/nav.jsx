@@ -1,8 +1,9 @@
+// components/Nav.js
 "use client"
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import React, { useState } from "react";
-import logo from "../../public/logo.svg"
+import logo from "../../public/logo.svg";
 
 const MENU_ITEMS = [
   { label: "Artists", path: "/artists" },
@@ -14,6 +15,7 @@ const MENU_ITEMS = [
 const Nav = () => {
   const [isNavActive, setIsNavActive] = useState(null);
   const [activeItemIdx, setActiveItemIdx] = useState(-1);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const NavItem = ({ label, path, isActive }) => {
     return (
@@ -23,11 +25,27 @@ const Nav = () => {
     );
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <header>
+    <header className={`header ${isScrolled ? "scrolled" : ""}`}>
       <nav className={`nav`}>
         <Link href={"/"}>
-          <Image src={logo} alt="logo" width="100" height="60"/>
+          <Image src={logo} alt="logo" width="100" height="60" />
         </Link>
         <div
           onClick={() => setIsNavActive(!isNavActive)}
@@ -46,7 +64,11 @@ const Nav = () => {
               }}
               key={item.label}
             >
-              <NavItem label={item.label} path={item.path} isActive={activeItemIdx === idx} />
+              <NavItem
+                label={item.label}
+                path={item.path}
+                isActive={activeItemIdx === idx}
+              />
             </div>
           ))}
         </div>

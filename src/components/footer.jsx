@@ -9,7 +9,7 @@ export default function Footer() {
     <section className='container'>
       <footer className="footer__container">
       <div className="footer__logo">
-          <Image src={logo} alt="logo" width="fit" height="250"/>
+          <Image src={logo} alt="logo" className='footer__image' />
       </div>
       <div className="copyright__text">© {currentYear} 2023 COPYRIGHT Real Matters Entertainment - All Rights Reserved </div>
     </footer>

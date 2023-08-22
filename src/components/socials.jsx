@@ -10,7 +10,7 @@ export default function Socials() {
       <div className="social-icons-container">
         {socialData.map((social, index) => (
           <a key={index} href={social.link} className="social-icon-link">
-              <Image src={social.icon} alt={social.iconText} className={`fa fa-${social.icon} social-icon`} width={100} height={100} />
+              <Image src={social.icon} alt={social.iconText} className={`fa fa-${social.icon} social-icon`} />
           </a>
         ))}
       </div>
